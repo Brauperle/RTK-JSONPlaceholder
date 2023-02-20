@@ -22,15 +22,15 @@ const App = (): JSX.Element | null => {
         const user = users.find((u: User) => u.id === post.userId)
         const userName = user?.name
         return (
-          <div key={post.id} className='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
+          <div data-testid='post' key={post.id} className='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
             <div className='p-8'>
-              <div className='uppercase tracking-wide text-sm text-indigo-500 font-semibold'>
+              <div data-testid='post_username' className='uppercase tracking-wide text-sm text-indigo-500 font-semibold'>
                 {userName}
               </div>
-              <a href='#' className='block mt-1 text-lg leading-tight font-medium text-black hover:underline'>
+              <a data-testid='post_title' href='#' className='block mt-1 text-lg leading-tight font-medium text-black hover:underline'>
                 {post.title}
               </a>
-              <p className='mt-2 text-slate-500'>
+              <p data-testid='post_body' className='mt-2 text-slate-500'>
                 {post.body}
               </p>
             </div>

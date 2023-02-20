@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["vite/client"],
+    "types": [
+      "vitest",
+      "vitest/globals",
+      "vite/client",
+    ],
     "useDefineForClassFields": true
   },
   "include": ["src"],
